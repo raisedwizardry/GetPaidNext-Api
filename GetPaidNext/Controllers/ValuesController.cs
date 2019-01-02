@@ -17,11 +17,12 @@ namespace GetPaidNext.Controllers
             return new string[] { "value1", "value2" };
         }
 
-        // GET api/values/5
-        [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        // GET api/values/date
+        [HttpGet]
+        [Route("date/{date}")]
+        public ActionResult GetDate(String date)
         {
-            return "value";
+            return Ok(BiweeklyCalculate.GiveNextDate(date));
         }
 
         // POST api/values
