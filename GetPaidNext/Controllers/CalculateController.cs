@@ -10,20 +10,20 @@ namespace GetPaidNext.Controllers
     [ApiController]
     public class CalculateController : ControllerBase
     {
-        // GET api/calculate/weekly
+        // GET api/calculate/weekly/{date}
         [HttpGet]
         [Route("weekly/{date}")]
         public ActionResult GetWeeklyDate(String date)
         {
-            return Ok(Calculate.Weekly.GiveNextDate(date));
+            return Ok(Calculate.Weekly.NextPayDate(date));
         }
 
-        // GET api/calculate/biweekly
+        // GET api/calculate/biweekly/{date}
         [HttpGet]
         [Route("biweekly/{date}")]
         public ActionResult GetBiweeklyDate(String date)
         {
-            return Ok(Calculate.Biweekly.GiveNextDate(date));
+            return Ok(Calculate.Biweekly.NextPayDate(date));
         }
     }
 }

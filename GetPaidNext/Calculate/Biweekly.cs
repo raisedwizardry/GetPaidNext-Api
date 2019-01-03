@@ -7,7 +7,7 @@ namespace GetPaidNext.Calculate
 {
     public class Biweekly
     {
-        public static String GiveNextDate(String givenDate)
+        public static String NextPayDate(String givenDate)
         {
             DateTime parsedGivenDate = ParseGivenDate(givenDate);
             DateTime calculatedDate = DetermineNextDate(parsedGivenDate);
