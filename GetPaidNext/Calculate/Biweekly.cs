@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace GetPaidNext
+namespace GetPaidNext.Calculate
 {
-    public class BiweeklyCalculate
+    public class Biweekly
     {
         public static String GiveNextDate(String givenDate)
         {
@@ -19,12 +19,6 @@ namespace GetPaidNext
         {
             DateTime parsedGivenDate = DateTime.Parse(givenDate);
             return parsedGivenDate;
-        }
-
-        public static String GiveDayOfWeek(DateTime givenDate)
-        {
-            String givenDayOfWeek = new String(givenDate.DayOfWeek.ToString());
-            return givenDayOfWeek;
         }
 
         public static DateTime DetermineNextDate(DateTime parsedGivenDate)
