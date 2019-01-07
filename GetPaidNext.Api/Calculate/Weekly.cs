@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace GetPaidNext.Calculate
+namespace GetPaidNext.Api.Calculate
 {
-    public class Biweekly
+    public class Weekly
     {
-        public static String NextPayDate(String givenDate)
+        public string NextPayDate(string givenDate)
         {
             DateTime parsedGivenDate = ParseGivenDate(givenDate);
             DateTime calculatedDate = DetermineNextDate(parsedGivenDate);
@@ -15,18 +15,18 @@ namespace GetPaidNext.Calculate
             return dateString;
         }
 
-        public static DateTime ParseGivenDate(String givenDate)
+        private static DateTime ParseGivenDate(string givenDate)
         {
             DateTime parsedGivenDate = DateTime.Parse(givenDate);
             return parsedGivenDate;
         }
 
-        public static DateTime DetermineNextDate(DateTime parsedGivenDate)
+        private static DateTime DetermineNextDate(DateTime parsedGivenDate)
         {
             while (parsedGivenDate <= DateTime.Now)
             {
-                parsedGivenDate = parsedGivenDate.AddDays(14);
-            }   
+                parsedGivenDate = parsedGivenDate.AddDays(7);
+            }
             return parsedGivenDate;
         }
     }
