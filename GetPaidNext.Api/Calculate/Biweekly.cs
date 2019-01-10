@@ -15,6 +15,10 @@ namespace GetPaidNext.Api.Calculate
             return dateString;
         }
 
+        private string NextMonthPayThreeTimes(string givenDate)
+        {
+            //notyetimplemented
+        }
         private static DateTime ParseGivenDate(string givenDate)
         {
             DateTime parsedGivenDate = DateTime.Parse(givenDate);
