@@ -27,5 +27,14 @@ namespace GetPaidNext.Api.Controllers
             var lastPaid = new Calculate.GivenDate(date);
             return Ok(new { results = lastPaid.WeeklyNextPayDate() });
         }
+
+        // GET api/calculate/givendate/biweeklypaythree/{date}
+        [HttpGet]
+        [Route("givendate/biweeklypaythree/{date}")]
+        public ActionResult BiweeklyThreeMonth(string date)
+        {
+            var lastPaid = new Calculate.GivenDate(date);
+            return Ok(new { results = "" });
+        }
     }
 }
