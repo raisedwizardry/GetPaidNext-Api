@@ -5,24 +5,12 @@ namespace GetPaidNext.Api.Calculate
     public class GivenDate
     {
         public DateTime parsedGivenDate;
-        enum PayType { Biweekly=14, Weekly=7};
-        private int frequency;
+        public enum PayType { Biweekly=14, Weekly=7};
+        public int frequency;
+
         public GivenDate(string date)
         {
             parsedGivenDate = DateTime.Parse(date);
-        }
-
-        public string BiweeklyNextPayDate()
-        {
-            frequency = (int)PayType.Biweekly;
-            return NextPayDate(parsedGivenDate, frequency);
-
-        }
-
-        public string WeeklyNextPayDate()
-        {
-            frequency = (int)PayType.Weekly;
-            return NextPayDate(parsedGivenDate, frequency);
         }
 
         public static string NextPayDate(DateTime date, int frequency)
@@ -40,5 +28,7 @@ namespace GetPaidNext.Api.Calculate
             }
             return date;
         }
+
     }
+
 }
