@@ -5,10 +5,12 @@ VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetPaidNext.Api", "GetPaidNext.Api\GetPaidNext.Api.csproj", "{F1091E63-3467-4273-A77F-BD8A3B9F2DE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetPaidNext.Api.Tests", "GetPaidNext.Api.Tests\GetPaidNext.Api.Tests.csproj", "{80AFAD68-8971-4BFC-B363-FE8CA92B714F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetPaidNext.Api.Tests", "GetPaidNext.Api.Tests\GetPaidNext.Api.Tests.csproj", "{80AFAD68-8971-4BFC-B363-FE8CA92B714F}"
 	ProjectSection(ProjectDependencies) = postProject
 		{F1091E63-3467-4273-A77F-BD8A3B9F2DE0} = {F1091E63-3467-4273-A77F-BD8A3B9F2DE0}
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetPaidNext.Api.MoreTests", "GetPaidNext.Api.MoreTests\GetPaidNext.Api.MoreTests.csproj", "{ECB560BA-E3AE-48B1-AFCA-41C17E75B45C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,6 +26,10 @@ Global
 		{80AFAD68-8971-4BFC-B363-FE8CA92B714F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80AFAD68-8971-4BFC-B363-FE8CA92B714F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80AFAD68-8971-4BFC-B363-FE8CA92B714F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECB560BA-E3AE-48B1-AFCA-41C17E75B45C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECB560BA-E3AE-48B1-AFCA-41C17E75B45C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECB560BA-E3AE-48B1-AFCA-41C17E75B45C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECB560BA-E3AE-48B1-AFCA-41C17E75B45C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

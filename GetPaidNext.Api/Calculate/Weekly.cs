@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 
 namespace GetPaidNext.Api.Calculate
 {
-    public class Weekly : GivenDate
+    public class Weekly : PerWeek
     {
         public Weekly(string date) : base(date) { }
 
-        public string WeeklyNextPayDate()
+        public string NextPayDate()
         {
             frequency = (int)PayType.Weekly;
             return NextPayDate(parsedGivenDate, frequency);

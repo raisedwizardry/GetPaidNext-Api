@@ -5,16 +5,14 @@ using System.Threading.Tasks;
 
 namespace GetPaidNext.Api.Calculate
 {
-    public class Biweekly : PerWeek
+    public class Monthly : PerMonth
     {
-        public Biweekly(string date) : base(date) { }
+        public Monthly(string date) : base(date) { }
 
         public string NextPayDate()
         {
-            frequency = (int)PayType.Biweekly;
+            frequency = (int)PayType.Monthly;
             return NextPayDate(parsedGivenDate, frequency);
         }
-
     }
-
 }
